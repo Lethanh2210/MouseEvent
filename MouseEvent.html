@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <img src="bongvang.jpg" id="myImage">
+    <p>Click button below to move the image to right</p>
+    <button onclick="moveLeft()">Move Left</button>
+    <button onclick="moveRight()">Move Right</button>
+
+<script>
+    let img = null;
+    img = document.getElementById('myImage');
+
+    function init(){
+        img = document.getElementById('myImage');
+        img.style.position = 'relative';
+        img.style.left = '100px';
+    }
+
+    function moveRight(){
+        img.style.left = parseInt(img.style.left) + 100 + 'px';
+    }
+    function moveLeft(){
+        img.style.left = parseInt(img.style.left) - 100 + 'px';
+    }
+    window.onload = init;
+</script>
+</body>
+</html>
